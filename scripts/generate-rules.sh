@@ -66,13 +66,14 @@ main() {
     for rule in "category-game-platforms-download@cn" "category-games@cn" "steam@cn"; do
         local temp_file="$TMPDIR/game_${rule//[@:\/]/-}.txt"
         "$geoview_path" -type geosite -input "$geosite_path" -list "$rule" -output "$temp_file" 2>/dev/null || continue
-        if[ -s "$temp_file" ]; then
+        
+        if [ -s "$temp_file" ]; then
             cat "$temp_file" >> "$game_temp"
             echo "" >> "$game_temp"
         fi
     done
     
-    if[ -s "$TMPDIR/ai_rules.txt" ]; then
+    if [ -s "$TMPDIR/ai_rules.txt" ]; then
         grep -v '^$' "$TMPDIR/ai_rules.txt" | sort -u | sed 's/^/./' > "$OUTDIR/proxy-ai.list"
     else
         > "$OUTDIR/proxy-ai.list"
