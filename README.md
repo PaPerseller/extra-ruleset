@@ -4,8 +4,8 @@
 
 ## 生成的文件
 
-- **proxy-ai.list** - AI 相关服务代理规则（排除中国）
-- **proxy-game.list** - 游戏相关服务代理规则（中国区）
+- **AI DOMAIN-SET** - AI 相关服务代理规则（排除中国）
+- **direct-game DOMAIN-SET** - 游戏相关服务代理规则（中国区）
 
 ## 致谢
 

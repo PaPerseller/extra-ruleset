@@ -172,17 +172,17 @@ main() {
     if [ -s "$game_temp" ]; then
         log_info "处理游戏规则..."
         # 移除空行、重复项，排序，并添加"."前缀
-        grep -v '^$' "$game_temp" | sort -u | sed 's/^/./' > "$WORKDIR/proxy-game.list"
-        log_info "游戏规则数量: $(wc -l < "$WORKDIR/proxy-game.list")"
+        grep -v '^$' "$game_temp" | sort -u | sed 's/^/./' > "$WORKDIR/direct-game.list"
+        log_info "游戏规则数量: $(wc -l < "$WORKDIR/direct-game.list")"
     else
         log_warn "未提取到游戏规则，创建空文件"
-        > "$WORKDIR/proxy-game.list"
+        > "$WORKDIR/direct-game.list"
     fi
     
     # 5. 验证生成的文件
     log_info "=== 步骤 5: 验证结果 ==="
     
-    for file in "proxy-ai.list" "proxy-game.list"; do
+    for file in "proxy-ai.list" "direct-game.list"; do
         if [ -f "$WORKDIR/$file" ]; then
             local line_count=$(wc -l < "$WORKDIR/$file")
             local file_size=$(du -h "$WORKDIR/$file" | cut -f1)
@@ -201,7 +201,7 @@ main() {
     log_info "=== 完成 ==="
     log_info "规则文件已生成到: $WORKDIR/"
     log_info "- proxy-ai.list"
-    log_info "- proxy-game.list"
+    log_info "- direct-game.list"
 }
 
 # 运行主函数

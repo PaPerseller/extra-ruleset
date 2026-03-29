@@ -39,7 +39,7 @@ jobs:
     - name: Verify generated files
       run: |
         echo "=== 验证生成的文件 ==="
-        for file in proxy-ai.list proxy-game.list; do
+        for file in proxy-ai.list direct-game.list; do
           if [ -f "$file" ]; then
             echo "$file:"
             echo "  行数: $(wc -l < "$file")"
@@ -55,7 +55,7 @@ jobs:
     - name: Commit and push if changed
       run: |
         # 检查文件是否有变化
-        if git diff --quiet --exit-code proxy-ai.list proxy-game.list; then
+        if git diff --quiet --exit-code proxy-ai.list direct-game.list; then
           echo "文件未变化，无需提交"
         else
           echo "文件有变化，准备提交"
@@ -65,36 +65,9 @@ jobs:
           git config --local user.name "GitHub Action"
           
           # 添加和提交
-          git add proxy-ai.list proxy-game.list
+          git add proxy-ai.list direct-game.list
           git commit -m "chore: 更新规则文件 [自动生成]"
           
           # 推送
           git push
         fi
-        
-    # - name: Create summary
-    #   if: always()
-    #   run: |
-    #     echo "## 规则生成报告" >> $GITHUB_STEP_SUMMARY
-    #     echo "" >> $GITHUB_STEP_SUMMARY
-    #     echo "**生成时间:** $(date)" >> $GITHUB_STEP_SUMMARY
-    #     echo "" >> $GITHUB_STEP_SUMMARY
-        
-    #     for file in proxy-ai.list proxy-game.list; do
-    #       if [ -f "$file" ]; then
-    #         echo "### $file" >> $GITHUB_STEP_SUMMARY
-    #         echo "- **行数:** $(wc -l < "$file")" >> $GITHUB_STEP_SUMMARY
-    #         echo "- **大小:** $(du -h "$file" | cut -f1)" >> $GITHUB_STEP_SUMMARY
-    #         echo "" >> $GITHUB_STEP_SUMMARY
-    #       else
-    #         echo "### $file" >> $GITHUB_STEP_SUMMARY
-    #         echo "- **状态:** ❌ 未生成" >> $GITHUB_STEP_SUMMARY
-    #         echo "" >> $GITHUB_STEP_SUMMARY
-    #       fi
-    #     done
-        
-    #     echo "**日志:**" >> $GITHUB_STEP_SUMMARY
-    #     echo '```' >> $GITHUB_STEP_SUMMARY
-    #     # 这里可以添加更多日志信息
-    #     echo '生成完成!' >> $GITHUB_STEP_SUMMARY
-    #     echo '```' >> $GITHUB_STEP_SUMMARY
