@@ -4,12 +4,12 @@ on:
   schedule:
     # 每月15号早上7点执行 (UTC时间)
     - cron: '0 7 15 * *'
-  workflow_dispatch:  # 允许手动触发
-  push:
-    branches: [ main ]
-    paths:
-      - 'scripts/**'
-      - '.github/workflows/**'
+  workflow_dispatch:
+  # push:
+  #   branches: [ main ]
+  #   paths:
+  #     - 'scripts/**'
+  #     - '.github/workflows/**'
 
 jobs:
   generate:
