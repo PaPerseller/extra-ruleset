@@ -2,10 +2,14 @@
 
 自动从 v2ray-rules-dat 提取特定规则，生成代理规则列表。
 
-## 生成的文件
+## 规则文件
 
-- **AI DOMAIN-SET** - AI 相关服务代理规则（排除中国）
-- **direct-game DOMAIN-SET** - 游戏相关服务代理规则（中国区）
+**DOMAIN-SET:**
+
+|                                                  proxy                                                  |                                                    direct                                                     |
+| :-----------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+| [ai](https://raw.githubusercontent.com/PaPerseller/extra-ruleset/refs/heads/main/ruleset/proxy-ai.list) | [game](https://raw.githubusercontent.com/PaPerseller/extra-ruleset/refs/heads/main/ruleset/direct-game.list)  |
+|                                                                                                         | [cdn](https://raw.githubusercontent.com/PaPerseller/extra-ruleset/refs/heads/main/ruleset/direct-cdn.list) |
 
 ## 致谢
 
