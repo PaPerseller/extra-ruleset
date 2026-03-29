@@ -2,72 +2,49 @@ name: Generate Extra Rulesets
 
 on:
   schedule:
-    # 每月15号早上7点执行 (UTC时间)
     - cron: '0 7 15 * *'
   workflow_dispatch:
-  # push:
-  #   branches: [ main ]
-  #   paths:
-  #     - 'scripts/**'
-  #     - '.github/workflows/**'
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v6
-      with:
-        fetch-depth: 0
-    
-    - name: Set up environment
-      run: |
-        echo "WORKDIR=$(pwd)" >> $GITHUB_ENV
-        echo "RUN_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-        
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y curl wget jq
-        
-    - name: Generate rules
-      run: |
-        chmod +x ./scripts/generate-rules.sh
-        ./scripts/generate-rules.sh
-        
-    - name: Verify generated files
-      run: |
-        echo "=== 验证生成的文件 ==="
-        for file in proxy-ai.list direct-game.list; do
-          if [ -f "$file" ]; then
-            echo "$file:"
-            echo "  行数: $(wc -l < "$file")"
-            echo "  大小: $(du -h "$file" | cut -f1)"
-            echo "  前3行:"
-            head -3 "$file" | sed 's/^/    /'
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl wget jq
+          
+      - name: Generate rules
+        run: |
+          chmod +x ./scripts/generate-rules.sh
+          ./scripts/generate-rules.sh
+          
+      - name: Verify generated files
+        run: |
+          for file in ruleset/proxy-ai.list ruleset/direct-game.list ruleset/direct-cdn.list; do
+            if[ ! -f "$file" ]; then
+              echo "Error: $file not found!"
+              exit 1
+            fi
+          done
+          
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet --exit-code ruleset/; then
+            echo "No changes detected."
           else
-            echo "错误: $file 未找到!"
-            exit 1
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            
+            git add ruleset/
+            git commit -m "chore: update rulesets"
+            git push
           fi
-        done
-        
-    - name: Commit and push if changed
-      run: |
-        # 检查文件是否有变化
-        if git diff --quiet --exit-code proxy-ai.list direct-game.list; then
-          echo "文件未变化，无需提交"
-        else
-          echo "文件有变化，准备提交"
-          
-          # 配置git
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          
-          # 添加和提交
-          git add proxy-ai.list direct-game.list
-          git commit -m "chore: 更新规则文件 [自动生成]"
-          
-          # 推送
-          git push
-        fi
