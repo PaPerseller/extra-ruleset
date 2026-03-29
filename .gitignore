@@ -1,0 +1,30 @@
+# 临时文件
+*.tmp
+*.temp
+/tmp/
+/temp/
+
+# 下载的临时文件
+geoview-*
+geosite-*
+
+# 编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+logs/
+
+# 测试文件
+test-*
+*.test
+
+# 不需要提交的生成文件（但我们需要提交最终的list文件）
+# 所以这里只忽略中间文件
