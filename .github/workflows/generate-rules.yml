@@ -30,7 +30,7 @@ jobs:
       - name: Verify generated files
         run: |
           for file in ruleset/proxy-ai.list ruleset/direct-game.list ruleset/direct-cdn.list; do
-            if[ ! -f "$file" ]; then
+            if [ ! -f "$file" ]; then
               echo "Error: $file not found!"
               exit 1
             fi
