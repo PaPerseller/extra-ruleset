@@ -1,5 +1,7 @@
+.agentclientprotocol.com
 .ai.google.dev
 .ai.studio
+.aicode.googleapis.com
 .aida.googleapis.com
 .aisandbox-pa.googleapis.com
 .aistudio.google.com
@@ -10,6 +12,7 @@
 .antigravity-unleash.goog
 .antigravity.google
 .antigravity.googleapis.com
+.anythingllm.com
 .bard.google.com
 .browser-intake-datadoghq.com
 .cerebras.ai
@@ -38,8 +41,14 @@
 .comfy.org
 .comfyci.org
 .comfyregistry.org
+.copilot-proxy.githubusercontent.com
+.copilot-telemetry-service.githubusercontent.com
+.copilot-telemetry.githubusercontent.com
+.copilot-workspace.githubnext.com
 .copilot.microsoft.com
+.copilotprodattachments.blob.core.windows.net
 .coze.com
+.crewai.com
 .crixet.com
 .cursor-cdn.com
 .cursor.com
@@ -80,7 +89,9 @@
 .kiro.dev
 .labs.google
 .labs.google.com
+.langchain.com
 .liveperson.net
+.lmstudio.ai
 .lovart.ai
 .lpsnmedia.net
 .makersuite.google.com
@@ -88,6 +99,7 @@
 .manuscdn.com
 .marscode.com
 .meta.ai
+.minimax.io
 .mistral.ai
 .notebooklm-pa.googleapis.com
 .notebooklm.google
@@ -96,6 +108,7 @@
 .o33249.ingest.sentry.io
 .oaistatic.com
 .oaiusercontent.com
+.ollama.com
 .opal.google
 .opal.google.com
 .openai.com
@@ -107,9 +120,11 @@
 .openart.ai
 .openclaw.ai
 .openrouter.ai
+.openspec.dev
 .oystermercury.top
 .perplexity.ai
 .perplexity.com
+.plannotator.ai
 .poe.com
 .poecdn.net
 .ppl-ai-file-upload.s3.amazonaws.com
@@ -121,6 +136,7 @@
 .servd-anthropic-website.b-cdn.net
 .sora.com
 .spicywriter.com
+.stitch.withgoogle.com
 .themeforest.net
 .trae.ai
 .turn.livekit.cloud
