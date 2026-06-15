@@ -13,6 +13,7 @@
 .antigravity.google
 .antigravity.googleapis.com
 .anythingllm.com
+.arena.ai
 .bard.google.com
 .browser-intake-datadoghq.com
 .cerebras.ai
@@ -27,6 +28,7 @@
 .claude.ai
 .claude.com
 .claudemcpclient.com
+.claudemcpcontent.com
 .claudeusercontent.com
 .clawhub.ai
 .clipdrop.co
@@ -72,6 +74,7 @@
 .geller-pa.googleapis.com
 .gemini.google
 .gemini.google.com
+.gemini.gstatic.com
 .generativeai.google
 .generativelanguage.googleapis.com
 .githubcopilot.com
@@ -99,14 +102,17 @@
 .manuscdn.com
 .marscode.com
 .meta.ai
+.midjourney.com
 .minimax.io
 .mistral.ai
+.mozilla.ai
 .notebooklm-pa.googleapis.com
 .notebooklm.google
 .notebooklm.google.com
 .notebooklm.googleapis.com
 .o33249.ingest.sentry.io
 .oaistatic.com
+.oaistatsig.com
 .oaiusercontent.com
 .ollama.com
 .opal.google
@@ -132,11 +138,14 @@
 .pplx.ai
 .proactivebackend-pa.googleapis.com
 .production-openaicom-storage.azureedge.net
+.qoder.com
 .robinfrontend-pa.googleapis.com
 .servd-anthropic-website.b-cdn.net
+.sider.ai
 .sora.com
 .spicywriter.com
 .stitch.withgoogle.com
+.tapnow.ai
 .themeforest.net
 .trae.ai
 .turn.livekit.cloud
