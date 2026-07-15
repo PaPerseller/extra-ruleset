@@ -20,6 +20,7 @@
 .chat.com
 .chatgpt.com
 .chatgpt.livekit.cloud
+.chatgpt.site
 .chutes.ai
 .cici.com
 .ciciai.com
@@ -47,6 +48,8 @@
 .copilot-telemetry-service.githubusercontent.com
 .copilot-telemetry.githubusercontent.com
 .copilot-workspace.githubnext.com
+.copilot.cloud.microsoft
+.copilot.com
 .copilot.microsoft.com
 .copilotprodattachments.blob.core.windows.net
 .coze.com
@@ -119,7 +122,9 @@
 .opal.google.com
 .openai.com
 .openai.com.cdn.cloudflare.net
+.openai.qualtrics.com
 .openaiapi-site.azureedge.net
+.openaiassets.blob.core.windows.net
 .openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
 .openaicom.imgix.net
 .openaicomproductionae4b.blob.core.windows.net
@@ -148,6 +153,7 @@
 .tapnow.ai
 .themeforest.net
 .trae.ai
+.tripo3d.ai
 .turn.livekit.cloud
 .webchannel-alkalimakersuite-pa.clients6.google.com
 .windsurf.build
