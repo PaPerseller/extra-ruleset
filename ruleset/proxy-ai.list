@@ -45,6 +45,7 @@
 .comfyci.org
 .comfyregistry.org
 .copilot-proxy.githubusercontent.com
+.copilot-stg.com
 .copilot-telemetry-service.githubusercontent.com
 .copilot-telemetry.githubusercontent.com
 .copilot-workspace.githubnext.com
@@ -62,6 +63,8 @@
 .daily-cloudcode-pa.googleapis.com
 .deepmind.com
 .deepmind.google
+.deepwiki.com
+.deepwiki.org
 .devin.ai
 .diabrowser.com
 .diabrowser.engineering
@@ -73,6 +76,7 @@
 .envato-static.com
 .envato.com
 .envatousercontent.com
+.flow.google
 .gateway.ai.cloudflare.com
 .geller-pa.googleapis.com
 .gemini.google
@@ -81,8 +85,11 @@
 .generativeai.google
 .generativelanguage.googleapis.com
 .githubcopilot.com
+.grazie.ai
+.grazie.aws.intellij.net
 .grok.com
 .grok.x.com
+.grokipedia.com
 .groq.com
 .h2o.ai
 .hf.co
@@ -90,6 +97,7 @@
 .host.livekit.cloud
 .huggingface.co
 .jasper.ai
+.jetbrains.ai
 .jules.google
 .jules.google.com
 .kiro.dev
@@ -109,6 +117,7 @@
 .minimax.io
 .mistral.ai
 .mozilla.ai
+.notebook.google.com
 .notebooklm-pa.googleapis.com
 .notebooklm.google
 .notebooklm.google.com
