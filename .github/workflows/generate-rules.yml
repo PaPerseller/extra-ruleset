@@ -17,11 +17,6 @@ jobs:
         with:
           fetch-depth: 0
           
-      #- name: Install dependencies
-        #run: |
-          #apt update
-          #apt install -y curl wget jq
-          
       - name: Generate rules
         run: |
           chmod +x ./scripts/generate-rules.sh
